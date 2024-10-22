@@ -4,14 +4,14 @@ import numpy as np
 
 def calculate_psnr(image1, image2):
     mse = np.mean((image1 - image2) ** 2)
-    if mse == 0:  # If MSE is zero, return infinite PSNR (perfect match)
+    if mse == 0: 
         return float('inf')
     psnr = 20 * np.log10(255.0 / np.sqrt(mse))
     return psnr
 
 def get_images_from_folder(folder_path):
     image_files = [f for f in os.listdir(folder_path) if f.endswith('.png')]
-    image_files.sort()  # Ensure the same order for ground truth and outputs
+    image_files.sort()  
     return image_files
 
 def calculate_psnr_for_folders(ground_truth_folder, model_output_folder):
