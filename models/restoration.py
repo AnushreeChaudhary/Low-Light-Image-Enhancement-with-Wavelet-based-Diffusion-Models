@@ -21,7 +21,6 @@ class DiffusiveRestoration:
 
         self.model = diffusion.model  
 
-        # Load the checkpoint
         if os.path.isfile(args.resume):
             checkpoint = torch.load(args.resume)
             self.model.load_state_dict(checkpoint)  
