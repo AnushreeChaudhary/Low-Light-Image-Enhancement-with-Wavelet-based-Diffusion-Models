@@ -32,7 +32,7 @@ python evaluate.py
 ```
 
 ## Analysis
-The PSNR (Peak Signal-to-Noise Ratio) and SSIM (Structural Similarity Index) metrics can be used to compare the outputs of the models at regular checkpoints (with training data as input) with the corresponding ground truth. The codes for these metrics are in the 'Analyis' folder. It also contains a ddm.py file (that can be used instead of the existing file in the folder 'models') for logging of epoch times, step losses and saving the models at regular checkpoints after every 50 epochs. This may be used for further analysis.
+The PSNR (Peak Signal-to-Noise Ratio) and SSIM (Structural Similarity Index) metrics can be used to compare the outputs of the models at regular checkpoints (with training data as input) with the corresponding ground truth. The codes for these metrics are in the 'Analyis' folder. It also contains a ddm.py file (that can be used instead of the existing file in the folder 'models') for logging of epoch times, step losses and saving the models at regular checkpoints after every 50 epochs. This may be used for further analysis. You will need to maintain two folders for images corresponding to ground truth and model outputs. Ensure the path for the folders is mentioned correctly.
 
 ## Acknowledgement
 The code is mainly adapted from the official work on this paper: [DiffLL](https://github.com/JianghaiSCU/Diffusion-Low-Light). I thank the authors for their contributions.
