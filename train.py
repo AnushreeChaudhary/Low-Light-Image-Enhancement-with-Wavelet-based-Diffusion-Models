@@ -71,8 +71,8 @@ def main():
     diffusion.train(DATASET)
 
     # Save the trained model
-    model_save_path = 'ckpt/trained_model.pth.tar'  # Specify the path to save the model
-    os.makedirs(os.path.dirname(model_save_path), exist_ok=True)  # Ensure the directory exists
+    model_save_path = 'ckpt/trained_model.pth.tar'  
+    os.makedirs(os.path.dirname(model_save_path), exist_ok=True)
     torch.save(diffusion.model.state_dict(), model_save_path)
     print(f"Model saved to {model_save_path}")
 
