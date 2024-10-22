@@ -19,14 +19,13 @@ class DiffusiveRestoration:
         self.config = config
         self.diffusion = diffusion
 
-        # Initialize the model correctly
-        self.model = diffusion.model  # Assign the diffusion model to self.model
+        self.model = diffusion.model  
 
         # Load the checkpoint
         if os.path.isfile(args.resume):
             checkpoint = torch.load(args.resume)
-            self.model.load_state_dict(checkpoint)  # Load the model state_dict
-            self.model.eval()  # Set the model to evaluation mode
+            self.model.load_state_dict(checkpoint)  
+            self.model.eval()  
         else:
             print('Pre-trained diffusion model path is missing!')
 
