@@ -322,8 +322,8 @@ class DenoisingDiffusion(object):
             print(f"Epoch {epoch+1} took {epoch_duration:.2f} seconds")
 
             if (epoch+1)%50 == 0:
-                model_save_path = f"ckpt/trained_model_epoch_{epoch+1}.pth.tar"  # Specify the path to save the model
-                os.makedirs(os.path.dirname(model_save_path), exist_ok=True)  # Ensure the directory exists
+                model_save_path = f"ckpt/trained_model_epoch_{epoch+1}.pth.tar"  
+                os.makedirs(os.path.dirname(model_save_path), exist_ok=True)  
                 torch.save(self.model.state_dict(), model_save_path)
                 print(f"Model saved to {model_save_path}")
          
