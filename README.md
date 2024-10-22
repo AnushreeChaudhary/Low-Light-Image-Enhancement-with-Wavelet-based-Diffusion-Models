@@ -26,6 +26,7 @@ python train.py
 ```
 
 ## How can you test the model?
+Ensure that the path to the trained model is mentioned correctly in the evaluate.py file.
 ```
 python evaluate.py
 ```
